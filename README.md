@@ -1,7 +1,7 @@
-# Docker for symfony project
+# Symfony 6 test project
 
 ## Description
-Base docker images for starting symfony project: nginx, php, mysql, phpmyadmin. 
+Project for developing and testing symfony 6 features. Inspired by official symfony video cource
 
 ## Note
  - use .env for configuration database

@@ -1,1 +1,4 @@
-.idea/
+.idea
+mysql
+logs
+*.log

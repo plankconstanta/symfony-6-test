@@ -2,3 +2,4 @@
 mysql
 logs/*
 *.log
+logs/nginx/error.log

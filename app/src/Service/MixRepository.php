@@ -25,12 +25,13 @@ class MixRepository
     {
         $output = new BufferedOutput();
         $this->twigDebugCommand->run(new ArrayInput([]), $output);
-        dd($output);
+        //dd($output);
 
         $mixes = $this->cache->get('mixes_data', function(CacheItemInterface $cacheItem) {
             $cacheItem->expiresAfter($this->isDebug ? 5 : 60);
             //$response = $this->httpClient->request('GET', 'https://raw.githubusercontent.com/SymfonyCasts/vinyl-mixes/main/mixes.json');
             $response = $this->githubContentClient->request('GET', '/SymfonyCasts/vinyl-mixes/main/mixes.json');
+            //dd($response->toArray());
             return $response->toArray();
         });
         return $mixes;

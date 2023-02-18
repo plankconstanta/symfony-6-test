@@ -23,6 +23,7 @@ class MixRepository
 
     public function findAll(): array
     {
+        //dd($this->githubContentClient);
         $output = new BufferedOutput();
         $this->twigDebugCommand->run(new ArrayInput([]), $output);
         //dd($output);

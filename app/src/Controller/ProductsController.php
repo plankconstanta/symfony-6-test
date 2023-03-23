@@ -37,7 +37,7 @@ class ProductsController extends AbstractController
 
         // return changed data
         $responceContent = $serializer->serialize($modifiedEnquery, 'json');
-        $responce = new Response(content: $responceContent, status: Response::HTTP_OK);
+        $responce = new Response(content: $responceContent, status: Response::HTTP_OK, headers: ['Content-Type'=>'json']);
 
         return $responce;
     }
